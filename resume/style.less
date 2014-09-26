@@ -6,6 +6,7 @@
 @letter-height: 10.90in;
 @title-color: black;
 @sub-title-color: lighten(@title-color, 30%);
+@header-metadata-color: lighten(@title-color, 80%);
 @section-header-color: lighten(@title-color, 20%);
 @text-color: lighten(@title-color, 20%);
 @section-item-header-color: lighten(@title-color, 30%);
@@ -64,6 +65,8 @@ header {
       font-style: normal;
       font-family: Calibri;
       font-size: 9.75pt;
+
+      color: @header-metadata-color;
    }
 }
 
