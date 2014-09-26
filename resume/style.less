@@ -21,6 +21,11 @@ body {
    font-weight: normal;
    font-size: 10pt;
    box-sizing: border-box;
+
+   display: flex;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   justify-content: space-between;
 }
 
 a {
@@ -127,15 +132,15 @@ header {
          > li {
             .clearfix();
 
-            &:not(:first-of-type) { margin-top: 0.5em; }
+            &:not(:first-of-type) { margin-top: 0.8em; }
             
             > h3 { display: inline; font-size: 120%; font-weight: normal; }
             > time { float: right; }
-            > span { line-height: 120%; &:before { content: '\A'; white-space: pre; } }
+            > span { line-height: 130%; padding-top:0.5em; &:before { content: '\A'; white-space: pre; } }
             > nav {
                clear: right;
                float: right;
-               margin-top: 0.2em;
+               margin-top: 0.4em;
                > ul {
                   > li {
                      display: inline;

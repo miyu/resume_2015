@@ -185,6 +185,10 @@ body {
   font-weight: normal;
   font-size: 10pt;
   box-sizing: border-box;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
 }
 a {
   color: blue;
@@ -293,7 +297,7 @@ header > address {
   clear: both;
 }
 .detailed-block > section > ul > li:not(:first-of-type) {
-  margin-top: 0.5em;
+  margin-top: 0.8em;
 }
 .detailed-block > section > ul > li > h3 {
   display: inline;
@@ -304,7 +308,8 @@ header > address {
   float: right;
 }
 .detailed-block > section > ul > li > span {
-  line-height: 120%;
+  line-height: 130%;
+  padding-top: 0.5em;
 }
 .detailed-block > section > ul > li > span:before {
   content: '\A';
@@ -313,7 +318,7 @@ header > address {
 .detailed-block > section > ul > li > nav {
   clear: right;
   float: right;
-  margin-top: 0.2em;
+  margin-top: 0.4em;
 }
 .detailed-block > section > ul > li > nav > ul > li {
   display: inline;
