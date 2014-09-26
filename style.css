@@ -336,6 +336,7 @@ header > address {
 .detailed-block > section > ul > li > ul {
   margin-left: 1em;
   list-style: none;
+  color: #666666;
 }
 .detailed-block > section > ul > li > ul > li {
   margin-top: 0.3em;
