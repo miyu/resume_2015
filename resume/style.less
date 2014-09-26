@@ -4,14 +4,25 @@
 @padding: 0.25in;
 @letter-width: 8.5in;
 @letter-height: 10.90in;
+@title-color: black;
+@sub-title-color: lighten(@title-color, 30%);
+@section-header-color: lighten(@title-color, 20%);
+@text-color: lighten(@title-color, 20%);
+@section-item-header-color: lighten(@title-color, 30%);
+@section-item-description-color: lighten(@title-color, 40%);
+@section-item-metadata-color: lighten(@title-color, 50%);
+@section-item-metadata-link-color: lighten(#0000FF, 20%);
 
 @font-face {
    font-family: FrizQuadrata;
    src: url('Friz Quadrata Regular.ttf');
    font-weight: 200;
 }
+
 html { background-color: red;}
+
 body {
+   color: @text-color;
    background-color: white;
    padding: @padding;
    width: @letter-width - @padding;
@@ -28,14 +39,6 @@ body {
    justify-content: space-between;
 }
 
-a {
-   color: blue;
-   text-decoration: underline;
-   &:visited {
-      color: blue;
-   }
-}
-
 header {
    background-color: white;
    .clearfix();
@@ -47,10 +50,11 @@ header {
          font-family: "FrizQuadrata";
          margin-bottom: 5px;
       }
-      > h2 {
+      > span {
          font-size: 12pt;
          font-family: "FrizQuadrata";
-         opacity: 0.7;
+         font-weight: bold;
+         color: @sub-title-color;
       }
    }
    > address {
@@ -90,9 +94,10 @@ header {
       > h2 {
          display: inline;
          font-size: 120%;
-         font-weight: normal;
+         font-weight: bold;
          font-family: "FrizQuadrata";
          margin-bottom: 0.3em;
+         color: @section-header-color;
       }
 
       > aside {
@@ -101,7 +106,7 @@ header {
    }
 
    > :not(header) {
-      margin-top: 0.5em;
+      margin-top: 0.8em;
    }
 
    > .description {
@@ -134,9 +139,9 @@ header {
 
             &:not(:first-of-type) { margin-top: 0.8em; }
             
-            > h3 { display: inline; font-size: 120%; font-weight: normal; }
-            > time { float: right; }
-            > span { line-height: 130%; padding-top:0.5em; &:before { content: '\A'; white-space: pre; } }
+            > h3 { display: inline; font-size: 120%; font-weight: 700; color: @section-item-header-color; }
+            > time { float: right; color: @section-item-metadata-color; }
+            > span { line-height: 130%; padding-top:0.5em; color: @section-item-description-color; &:before { content: '\A'; white-space: pre; } }
             > nav {
                clear: right;
                float: right;
@@ -146,6 +151,14 @@ header {
                      display: inline;
                      &:not(:first-of-type) {
                         margin-left: 0.3em;
+                     }
+
+                     > a {
+                        color: @section-item-metadata-link-color;
+                        text-decoration: underline;
+                        &:visited {
+                           color: @section-item-metadata-link-color;
+                        }
                      }
                   }
                }
@@ -170,6 +183,8 @@ header {
    > h2 { display: none; }
    tr > td:first-of-type {
       padding-right: 1em;
+      font-weight: bold;
+      font-size: 120%;
    }
    tr > td:nth-of-type(2) {
       line-height: 1.5em;
