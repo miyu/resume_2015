@@ -1,0 +1,173 @@
+﻿@import "_reset";
+@import "_mixins";
+
+@padding: 0.25in;
+@letter-width: 8.5in;
+@letter-height: 10.90in;
+
+@font-face {
+   font-family: FrizQuadrata;
+   src: url('Friz Quadrata Regular.ttf');
+   font-weight: 200;
+}
+html { background-color: red;}
+body {
+   background-color: white;
+   padding: @padding;
+   width: @letter-width - @padding;
+   height: @letter-height - @padding;
+   // border:1px solid red;
+   font-family: "Segoe UI";
+   font-weight: normal;
+   font-size: 10pt;
+   box-sizing: border-box;
+}
+
+a {
+   color: blue;
+   text-decoration: underline;
+   &:visited {
+      color: blue;
+   }
+}
+
+header {
+   background-color: white;
+   .clearfix();
+
+   > section {
+      float: left;   
+      > h1 {
+         font-size: 24pt;
+         font-family: "FrizQuadrata";
+         margin-bottom: 5px;
+      }
+      > h2 {
+         font-size: 12pt;
+         font-family: "FrizQuadrata";
+         opacity: 0.7;
+      }
+   }
+   > address {
+      float: right;
+
+      text-align: right;
+      font-style: normal;
+      font-family: Calibri;
+      font-size: 9.75pt;
+   }
+}
+
+.simple-block {
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+
+   > h2 {
+      font-size: 120%;
+      font-weight: normal;
+      font-family: "FrizQuadrata";
+      margin-bottom: 0.3em;
+
+      display: block;
+      border-bottom: 1px solid black;
+      padding-bottom: 0.2em;
+   }
+}
+
+.detailed-block {   
+   margin-bottom: 1em;
+
+   > header {
+      display: block;
+      border-bottom: 1px solid black;
+      padding-bottom: 0.2em;
+
+      > h2 {
+         display: inline;
+         font-size: 120%;
+         font-weight: normal;
+         font-family: "FrizQuadrata";
+         margin-bottom: 0.3em;
+      }
+
+      > aside {
+         float: right;
+      }
+   }
+
+   > :not(header) {
+      margin-top: 0.5em;
+   }
+
+   > .description {
+      display: block;
+      padding: 0 0.5em;
+      text-align: justify;
+
+      &.one-liner {
+         // below forces justify on one-line description by creating dummy line, 0.3em allows for descenders in letters (ie: g)
+         height: 1.3em;
+         margin-bottom: -0.3em;
+         overflow: hidden;
+
+         &:after {
+             content: "";
+             display: inline-block;
+             width: 100%;
+         }
+      }
+   }
+
+   > section {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+
+      > ul {
+         list-style: none;
+         > li {
+            .clearfix();
+
+            &:not(:first-of-type) { margin-top: 0.5em; }
+            
+            > h3 { display: inline; font-size: 120%; font-weight: normal; }
+            > time { float: right; }
+            > span { line-height: 120%; &:before { content: '\A'; white-space: pre; } }
+            > nav {
+               clear: right;
+               float: right;
+               margin-top: 0.2em;
+               > ul {
+                  > li {
+                     display: inline;
+                     &:not(:first-of-type) {
+                        margin-left: 0.3em;
+                     }
+                  }
+               }
+            }
+            > ul {
+               margin-left: 1em;
+               list-style: none;
+               > li {
+                  margin-top: 0.3em;
+                  &:before {
+                     content: "- ";
+                     display: inline;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+.skills-and-tools {
+   > h2 { display: none; }
+   tr > td:first-of-type {
+      padding-right: 1em;
+   }
+   tr > td:nth-of-type(2) {
+      line-height: 1.5em;
+      padding-bottom: 0.5em;
+   }
+}
