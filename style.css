@@ -258,7 +258,7 @@ header > address {
   float: right;
 }
 .detailed-block > :not(header) {
-  margin-top: 0.8em;
+  margin-top: 0.4em;
 }
 .detailed-block > .description {
   display: block;
