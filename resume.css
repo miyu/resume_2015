@@ -192,6 +192,7 @@ body {
   justify-content: space-between;
 }
 header {
+  position: relative;
   background-color: white;
   zoom: 1;
 }
@@ -218,7 +219,9 @@ header > section > span {
   color: #4d4d4d;
 }
 header > address {
-  float: right;
+  position: absolute;
+  right: 0px;
+  top: 0px;
   text-align: right;
   font-style: normal;
   font-family: Calibri;
@@ -357,4 +360,4 @@ header > address {
   line-height: 1.5em;
   padding-bottom: 0.5em;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=resume.css.map */

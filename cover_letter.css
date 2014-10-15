@@ -1,0 +1,382 @@
+﻿/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+@font-face {
+  font-family: FrizQuadrata;
+  src: url('Friz Quadrata Regular.ttf');
+  font-weight: 200;
+}
+html {
+  background-color: red;
+}
+body {
+  color: #333333;
+  background-color: white;
+  padding: 0.65in;
+  width: 7.85in;
+  height: 10.25in;
+  font-family: "Segoe UI";
+  font-weight: normal;
+  font-size: 10pt;
+  box-sizing: border-box;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  position: relative;
+  background-color: white;
+  zoom: 1;
+}
+header:before,
+header:after {
+  content: "";
+  display: table;
+}
+header:after {
+  clear: both;
+}
+header > section {
+  float: left;
+}
+header > section > h1 {
+  font-size: 24pt;
+  font-family: "FrizQuadrata";
+  margin-bottom: 5px;
+}
+header > section > span {
+  font-size: 12pt;
+  font-family: "FrizQuadrata";
+  font-weight: bold;
+  color: #4d4d4d;
+}
+header > address {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  text-align: right;
+  font-style: normal;
+  font-family: Calibri;
+  font-size: 9.75pt;
+  color: #cccccc;
+}
+.simple-block {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.simple-block > h2 {
+  font-size: 120%;
+  font-weight: normal;
+  font-family: "FrizQuadrata";
+  margin-bottom: 0.3em;
+  display: block;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.2em;
+}
+.detailed-block {
+  margin-bottom: 1em;
+}
+.detailed-block > header {
+  display: block;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.2em;
+}
+.detailed-block > header > h2 {
+  display: inline;
+  font-size: 120%;
+  font-weight: bold;
+  font-family: "FrizQuadrata";
+  margin-bottom: 0.3em;
+  color: #333333;
+}
+.detailed-block > header > aside {
+  float: right;
+}
+.detailed-block > :not(header) {
+  margin-top: 0.4em;
+}
+.detailed-block > .description {
+  display: block;
+  padding: 0 0.5em;
+  text-align: justify;
+}
+.detailed-block > .description.one-liner {
+  height: 1.3em;
+  margin-bottom: -0.3em;
+  overflow: hidden;
+}
+.detailed-block > .description.one-liner:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+.detailed-block > section {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.detailed-block > section > ul {
+  list-style: none;
+}
+.detailed-block > section > ul > li {
+  zoom: 1;
+}
+.detailed-block > section > ul > li:before,
+.detailed-block > section > ul > li:after {
+  content: "";
+  display: table;
+}
+.detailed-block > section > ul > li:after {
+  clear: both;
+}
+.detailed-block > section > ul > li:not(:first-of-type) {
+  margin-top: 0.8em;
+}
+.detailed-block > section > ul > li > h3 {
+  display: inline;
+  font-size: 120%;
+  font-weight: 700;
+  color: #4d4d4d;
+}
+.detailed-block > section > ul > li > time {
+  float: right;
+  color: #808080;
+}
+.detailed-block > section > ul > li > span {
+  line-height: 130%;
+  padding-top: 0.5em;
+  color: #666666;
+}
+.detailed-block > section > ul > li > span:before {
+  content: '\A';
+  white-space: pre;
+}
+.detailed-block > section > ul > li > nav {
+  clear: right;
+  float: right;
+  margin-top: 0.4em;
+}
+.detailed-block > section > ul > li > nav > ul > li {
+  display: inline;
+}
+.detailed-block > section > ul > li > nav > ul > li:not(:first-of-type) {
+  margin-left: 0.3em;
+}
+.detailed-block > section > ul > li > nav > ul > li > a {
+  color: #6666ff;
+  text-decoration: underline;
+}
+.detailed-block > section > ul > li > nav > ul > li > a:visited {
+  color: #6666ff;
+}
+.detailed-block > section > ul > li > ul {
+  margin-left: 1em;
+  list-style: none;
+  color: #666666;
+}
+.detailed-block > section > ul > li > ul > li {
+  margin-top: 0.3em;
+}
+.detailed-block > section > ul > li > ul > li:before {
+  content: "- ";
+  display: inline;
+}
+.skills-and-tools > h2 {
+  display: none;
+}
+.skills-and-tools tr > td:first-of-type {
+  padding-right: 1em;
+  font-weight: bold;
+  font-size: 120%;
+}
+.skills-and-tools tr > td:nth-of-type(2) {
+  line-height: 1.5em;
+  padding-bottom: 0.5em;
+}
+body {
+  display: block;
+}
+header span {
+  display: block;
+  margin-top: 12px;
+  opacity: 0.5;
+}
+header address {
+  line-height: 120%;
+}
+.essay-block {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 175%;
+}
+.essay-block p:not(:first-child) {
+  text-indent: 50px;
+}
+/*# sourceMappingURL=cover_letter.css.map */

@@ -57,12 +57,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="style.less" />
-    <Content Include="style.css.map">
-      <DependentUpon>style.css</DependentUpon>
+    <Content Include="CoverLetter.html" />
+    <Content Include="cover_letter.css">
+      <DependentUpon>cover_letter.less</DependentUpon>
+    </Content>
+    <Content Include="resume.css">
+      <DependentUpon>resume.less</DependentUpon>
+    </Content>
+    <Content Include="_style_base.less" />
+    <Content Include="_style_base.css.map">
+      <DependentUpon>_style_base.css</DependentUpon>
     </Content>
     <Content Include="Friz Quadrata Regular.ttf" />
     <Content Include="frquad.ttf" />
+    <Content Include="resume.less" />
+    <Content Include="resume.css.map">
+      <DependentUpon>resume.css</DependentUpon>
+    </Content>
+    <Content Include="cover_letter.less" />
+    <Content Include="cover_letter.css.map">
+      <DependentUpon>cover_letter.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -74,8 +89,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.html" />
-    <Content Include="style.css">
-      <DependentUpon>style.less</DependentUpon>
+    <Content Include="_style_base.css">
+      <DependentUpon>_style_base.less</DependentUpon>
     </Content>
     <Content Include="Web.config" />
   </ItemGroup>

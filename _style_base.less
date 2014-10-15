@@ -1,7 +1,6 @@
 ﻿@import "_reset";
 @import "_mixins";
 
-@padding: 0.25in;
 @letter-width: 8.5in;
 @letter-height: 10.90in;
 @title-color: black;
@@ -41,6 +40,7 @@ body {
 }
 
 header {
+   position: relative;
    background-color: white;
    .clearfix();
 
@@ -59,7 +59,9 @@ header {
       }
    }
    > address {
-      float: right;
+      position: absolute;
+      right: 0px;
+      top: 0px;
 
       text-align: right;
       font-style: normal;
