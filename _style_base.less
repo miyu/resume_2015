@@ -196,4 +196,19 @@ header {
       line-height: 1.5em;
       padding-bottom: 0.5em;
    }
+   tr > td > ul {
+      list-style: none;
+      > li {
+         display: inline;
+         white-space: nowrap;
+
+         &:not(:last-of-type)::after {
+            content:", ";
+         }
+      }
+   }
+
+   .tools-row h3 {
+     display: none;
+   }
 }

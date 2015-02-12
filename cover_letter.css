@@ -360,6 +360,19 @@ header > address {
   line-height: 1.5em;
   padding-bottom: 0.5em;
 }
+.skills-and-tools tr > td > ul {
+  list-style: none;
+}
+.skills-and-tools tr > td > ul > li {
+  display: inline;
+  white-space: nowrap;
+}
+.skills-and-tools tr > td > ul > li:not(:last-of-type)::after {
+  content: ", ";
+}
+.skills-and-tools .tools-row h3 {
+  display: none;
+}
 body {
   display: block;
 }
