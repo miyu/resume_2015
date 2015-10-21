@@ -1,4 +1,4 @@
-﻿/* 
+/* 
 html5doctor.com Reset Stylesheet
 v1.6.1
 Last Updated: 2010-09-17
@@ -318,6 +318,16 @@ header > address {
   content: '\A';
   white-space: pre;
 }
+.detailed-block > section > ul > li > table {
+  color: #666666;
+}
+.detailed-block > section > ul > li > table ul {
+  margin-left: 0.2em;
+  list-style: none;
+}
+.detailed-block > section > ul > li > table ul li {
+  line-height: 1.3em;
+}
 .detailed-block > section > ul > li > nav {
   clear: right;
   float: right;
@@ -358,6 +368,9 @@ header > address {
 .skills-and-tools > h2 {
   display: none;
 }
+.skills-and-tools table {
+  width: 100%;
+}
 .skills-and-tools tr > td:first-of-type {
   padding-right: 1em;
   font-weight: bold;
@@ -367,4 +380,14 @@ header > address {
   line-height: 1.5em;
   padding-bottom: 0.5em;
 }
-/*# sourceMappingURL=style.css.map */
+.skills-and-tools tr > td:nth-of-type(2) ul {
+  margin: 0;
+  list-style: none;
+}
+.skills-and-tools tr > td:nth-of-type(2) ul li {
+  display: inline-block;
+}
+.skills-and-tools tr > td:nth-of-type(2) ul li:not(:last-of-type):after {
+  display: inline;
+  content: ", ";
+}
