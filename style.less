@@ -145,6 +145,14 @@ header {
             > h3 { display: inline; font-size: 120%; font-weight: 700; color: @section-item-header-color; }
             > time { float: right; color: @section-item-metadata-color; }
             > span { line-height: 130%; padding-top:0.5em; color: @section-item-description-color; &:before { content: '\A'; white-space: pre; } }
+            > table { 
+               color: @section-item-description-color; 
+               ul { 
+                  margin-left: 0.2em;
+                  list-style: none;
+                  li { line-height: 1.3em; }
+               }
+            }
             > nav {
                clear: right;
                float: right;
@@ -185,6 +193,9 @@ header {
 
 .skills-and-tools {
    > h2 { display: none; }
+   table { 
+      width: 100%;
+   }
    tr > td:first-of-type {
       padding-right: 1em;
       font-weight: bold;
@@ -193,5 +204,23 @@ header {
    tr > td:nth-of-type(2) {
       line-height: 1.5em;
       padding-bottom: 0.5em;
+
+      ul {
+         margin: 0;
+         list-style: none;
+         li { 
+            display: inline-block;
+            &:not(:last-of-type):after {
+               display: inline;
+               content: ", ";
+            }
+            //min-width: 80px;
+            //white-space: nowrap;
+
+            //&.double-width {
+            //   min-width: 160px !important;
+            //}
+         }
+      }
    }
 }
